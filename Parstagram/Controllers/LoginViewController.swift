@@ -8,23 +8,50 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
-    */
+}
 
+class LoginViewController: UIViewController
+{
+    
+    // Outlets
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        makeRoundedCorners(obj: loginButton)
+        makeRoundedCorners(obj: signupButton)
+        self.hideKeyboard()
+    }
+    
+    @IBAction func onLogin(_ sender: Any)
+    {
+    }
+    
+    @IBAction func onSignup(_ sender: Any)
+    {
+    }
+    
+    func makeRoundedCorners(obj: UIButton)
+    {
+        obj.layer.cornerRadius = 10.0
+        obj.layer.masksToBounds = true
+    }
+    
 }
