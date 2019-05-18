@@ -51,14 +51,14 @@
 			children = (
 				2A57C504228FC8BB00936F80 /* PostCell.swift */,
 			);
-			path = Cells;
+			name = Cells;
+			path = ../Cells;
 			sourceTree = "<group>";
 		};
 		2A595B68228F9C0A00B4FF05 = {
 			isa = PBXGroup;
 			children = (
 				2A595B73228F9C0A00B4FF05 /* Parstagram */,
-				2A57C503228FC88600936F80 /* Cells */,
 				2A595B72228F9C0A00B4FF05 /* Products */,
 				F82D6486F47B016A4B59E8A4 /* Pods */,
 				9E50B559C4538DC115927783 /* Frameworks */,
@@ -81,6 +81,7 @@
 				2A595B88228F9C7C00B4FF05 /* Assets */,
 				2A595B87228F9C4A00B4FF05 /* Storyboards */,
 				2A595B86228F9C3B00B4FF05 /* Controllers */,
+				2A57C503228FC88600936F80 /* Cells */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
