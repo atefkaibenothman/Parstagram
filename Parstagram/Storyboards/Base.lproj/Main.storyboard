@@ -119,6 +119,60 @@
                     <view key="view" contentMode="scaleToFill" id="PVx-7T-E5E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-sz-oG6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="450" id="tQ8-Ym-fQZ" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="450"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tQ8-Ym-fQZ" id="wF5-FT-x5X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6l-1n-EVf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Q6l-1n-EVf" secondAttribute="height" multiplier="315:305" id="O4v-k3-qDH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Kai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW3-Gf-nah">
+                                                    <rect key="frame" x="8" y="371" width="25.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is where the caption goes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAB-Pw-1Vu">
+                                                    <rect key="frame" x="41.5" y="371" width="313.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q6l-1n-EVf" firstAttribute="leading" secondItem="wF5-FT-x5X" secondAttribute="leading" id="1K2-JT-Ndu"/>
+                                                <constraint firstItem="eAB-Pw-1Vu" firstAttribute="top" secondItem="XW3-Gf-nah" secondAttribute="top" id="1ei-YW-jph"/>
+                                                <constraint firstItem="eAB-Pw-1Vu" firstAttribute="top" secondItem="Q6l-1n-EVf" secondAttribute="bottom" constant="8" id="WYm-PN-c8o"/>
+                                                <constraint firstItem="XW3-Gf-nah" firstAttribute="top" secondItem="Q6l-1n-EVf" secondAttribute="bottom" constant="8" id="YEY-hJ-t9J"/>
+                                                <constraint firstItem="Q6l-1n-EVf" firstAttribute="top" secondItem="wF5-FT-x5X" secondAttribute="top" id="nd3-V6-0Ck"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q6l-1n-EVf" secondAttribute="trailing" id="oEK-wS-sSQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="eAB-Pw-1Vu" secondAttribute="trailing" constant="20" id="pw1-wk-NPU"/>
+                                                <constraint firstItem="eAB-Pw-1Vu" firstAttribute="leading" secondItem="XW3-Gf-nah" secondAttribute="trailing" constant="8" id="qw6-8z-uf6"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eAB-Pw-1Vu" secondAttribute="bottom" constant="30" id="zfA-hf-osD"/>
+                                                <constraint firstItem="XW3-Gf-nah" firstAttribute="leading" secondItem="wF5-FT-x5X" secondAttribute="leading" constant="8" id="zqh-ru-Wxp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="XW3-Gf-nah" id="sM7-Pi-3ks"/>
+                                            <outlet property="captionLabel" destination="eAB-Pw-1Vu" id="hfL-wK-GVK"/>
+                                            <outlet property="photoView" destination="Q6l-1n-EVf" id="bk1-Qn-7v4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hod-PL-utl"/>
                     </view>
@@ -130,10 +184,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="1fK-sz-oG6" id="zdg-Wn-qYt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAj-J6-FU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="135"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="134.48275862068968"/>
         </scene>
         <!--Add Photo View Controller-->
         <scene sceneID="Xt0-5S-Hvp">

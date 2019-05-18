@@ -48,14 +48,9 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
             
             if success
             {
-                self.dismiss(animated: true, completion: nil)
+self.navigationController?.popToRootViewController(animated: true)
             }
-            
         }
-        
-                
-        
-        
     }
     
     @IBAction func onCameraButton(_ sender: Any)
