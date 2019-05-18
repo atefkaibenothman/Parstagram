@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 extension UIViewController
 {
@@ -42,10 +43,29 @@ class LoginViewController: UIViewController
     
     @IBAction func onLogin(_ sender: Any)
     {
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            if user != nil
+            {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+        }
     }
     
     @IBAction func onSignup(_ sender: Any)
     {
+        let user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        
+        user.signUpInBackground { (success, error) in
+            if success
+            {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+        }
     }
     
     func makeRoundedCorners(obj: UIButton)

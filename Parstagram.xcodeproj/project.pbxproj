@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A57C501228FB23200936F80 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C500228FB23200936F80 /* AddPhotoViewController.swift */; };
 		2A595B75228F9C0A00B4FF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A595B74228F9C0A00B4FF05 /* AppDelegate.swift */; };
 		2A595B7A228F9C0A00B4FF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A595B78228F9C0A00B4FF05 /* Main.storyboard */; };
 		2A595B7C228F9C0C00B4FF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A595B7B228F9C0C00B4FF05 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A57C500228FB23200936F80 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		2A595B71228F9C0A00B4FF05 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A595B74228F9C0A00B4FF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A595B79228F9C0A00B4FF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				2A595B89228F9E8C00B4FF05 /* LoginViewController.swift */,
 				2A595B8B228F9EB500B4FF05 /* FeedViewController.swift */,
+				2A57C500228FB23200936F80 /* AddPhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,7 +115,6 @@
 				909D03A62114EA5E79B11AF3 /* Pods-Parstagram.debug.xcconfig */,
 				54D022F7086E225B2134055F /* Pods-Parstagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A595B8A228F9E8C00B4FF05 /* LoginViewController.swift in Sources */,
+				2A57C501228FB23200936F80 /* AddPhotoViewController.swift in Sources */,
 				2A595B8C228F9EB500B4FF05 /* FeedViewController.swift in Sources */,
 				2A595B75228F9C0A00B4FF05 /* AppDelegate.swift in Sources */,
 			);
